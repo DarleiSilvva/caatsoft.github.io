@@ -1,0 +1,35 @@
+import os
+
+# Create the content for the app-ads.txt file
+# Using a placeholder for the pub ID as the user didn't provide it yet
+app_ads_content = "google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0"
+
+# Create the directory structure for the GitHub Pages repository
+os.makedirs("caatsoft.github.io", exist_ok=True)
+
+# Create the app-ads.txt file
+with open("caatsoft.github.io/app-ads.txt", "w") as f:
+    f.write(app_ads_content)
+
+# Create a basic index.html to make the site look professional
+index_content = """<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>CaatSoft | Apps e Jogos</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f4f4f4; }
+        h1 { color: #333; }
+        p { color: #666; }
+    </style>
+</head>
+<body>
+    <h1>CaatSoft</h1>
+    <p>Página oficial dos aplicativos da CaatSoft.</p>
+</body>
+</html>
+"""
+with open("caatsoft.github.io/index.html", "w") as f:
+    f.write(index_content)
+
+print("Arquivos criados na pasta 'caatsoft.github.io'")
